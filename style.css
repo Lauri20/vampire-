@@ -1,0 +1,50 @@
+body {
+    background-color: midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.bat {
+    position: relative;
+}
+
+.bat-body {
+    width: 60px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bat-wing {
+    width: 60px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 0;
+    transform-origin: center;
+    animation: flap 0.5s infinite alternate;
+}
+
+.left-wing {
+    left: -60px;
+    transform-origin: right;
+}
+
+.right-wing {
+    right: -60px;
+    transform-origin: left;
+}
+
+@keyframes flap {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
